@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' rel='stylesheet'
+    integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC' crossorigin='anonymous'>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <title>Scoreboard</title>
+</head>
+
+<source>
+<main>
+  <!-- SECTION RESET BUTTON -->
+  <section class="row number-font m-2 container-fluid">
+    <button class="col-2 offset-9 btn btn-danger" onclick="newScore()">reset</button>
+  </section>
+  <!-- SECTION scoreboard -->
+  <section class="row number-font justify-content-center container-fluid">
+    <div class="col-8 card m-2">
+      <div class="row justify-content-center">
+        <div class="col-5 text-center">HOME</div>
+        <div class="col-5 text-center">AWAY</div>
+        <div class="col-5 card text-center m-2 fs-1" id="home-score">0
+        </div>
+        <div class="col-5 card text-center m-2 fs-1" id="away-score">0
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- SECTION point buttons -->
+  <section class="row number-font justify-content-around container-fluid" id="">
+    <div class="col-5 text-center m-1">
+      <button class="btn btn-primary" onclick="addHome1(); winScore()">add 1</button>
+    </div>
+    <div class="col-5 text-center m-1">
+      <button class="btn btn-primary" onclick="addAway1() ">add 1</button>
+    </div>
+    <div class="col-5 text-center m-1">
+      <button class="btn btn-primary" onclick="addHome3(); winScore()">add 3</button>
+    </div>
+    <div class="col-5 text-center m-1">
+      <button class="btn btn-primary" onclick="addAway3()">add 3</button>
+    </div>
+  </section>
+  <!-- SECTION total score -->
+  <section class="row number-font justify-content-center container-fluid">
+    <div class="col-6">
+      <div class="row justify-content-center">
+        <h1 class="col-10 text-center">Total Score</h1>
+        <div class=" text-center" id="total-score"></div>
+      </div>
+    </div>
+    <button class="col-1 offset-10 btn btn-info" onclick="subAway1()">secret</button>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+
+</html>
